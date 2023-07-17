@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <context:component-scan base-package="demo8" />
+    <util:list list-class="java.util.LinkedList" id="skillname">
+        <value>java</value>
+        <value>c++</value>
+        <value>data structure</value>
+        <value>sql</value>
+    </util:list>
+    <bean class="demo8.Teacher" name="teacher" />
+<!--    <bean class="demo8.Teacher" name="teacher" scope="singleton"/>-->
+<!--    <bean class="demo8.Teacher" name="teacher" scope="prototype"/>-->
+</beans>

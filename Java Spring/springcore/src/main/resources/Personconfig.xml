@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <bean class="demo4.Certificate" name="certificate">
+        <constructor-arg value="Core Java" />
+    </bean>
+<!--    <bean class="demo4.Certificate" name="certificate" c:cName="angular"></bean>-->
+    <bean class="demo4.Person" name="person">
+        <constructor-arg value="Rintu" />
+<!--        <constructor-arg value="10004856" />-->
+        <constructor-arg value="10004856" type="int" />
+        <constructor-arg ref="certificate" />
+    </bean>
+</beans>
